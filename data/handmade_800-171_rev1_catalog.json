@@ -1,0 +1,2654 @@
+{
+    "catalog": {
+      "id": "uuid-1xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "metadata": {
+        "title": "NIST Special Publication 800-171 Revision 1: Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations",
+        "last-modified": "2018-06-07-04T14:55:16.051-05:00",
+        "version": "2018-06-07",
+        "oscal-version": "1.0.0-milestone3",
+        "properties": [
+          {
+            "name": "keywords",
+            "value": "Assurance, computer security, FISMA, Privacy Act, Risk Management Framework, security controls, security requirements"
+          }
+        ],
+        "links": [
+          {
+            "href": "#resource-pdf-sp-800-171r1",
+            "rel": "alternate",
+            "text": "NIST publication (PDF)"
+          },
+          {
+            "href": "#resource-doi-sp-800-171r1",
+            "rel": "canonical",
+            "text": "NIST publication via DOI lookup"
+          }
+        ],
+        "roles": [
+          {
+            "id": "creator",
+            "title": "Document creator"
+          },
+          {
+            "id": "contact",
+            "title": "Contact"
+          }
+        ],
+        "parties": [
+          {
+            "id": "IT-JTF",
+            "org": {
+              "org-name": "Joint Task Force, Transformation Initiative",
+              "addresses": [
+                {
+                  "postal-address": [
+                    "National Institute of Standards and Technology",
+                    "Attn: Computer Security Division",
+                    "Information Technology Laboratory",
+                    "100 Bureau Drive (Mail Stop 8930)"
+                  ],
+                  "city": "Gaithersburg",
+                  "state": "MD",
+                  "postal-code": "20899-8930"
+                }
+              ],
+              "email-addresses": [
+                "sec-cert@nist.gov"
+              ]
+            }
+          }
+        ],
+        "responsible-parties": {
+          "creator": {
+            "party-ids": [
+              "IT-JTF"
+            ]
+          },
+          "contact": {
+            "party-ids": [
+              "IT-JTF"
+            ]
+          }
+        }
+      },
+      "groups": [
+        {
+          "id": "3.1",
+          "class": "family",
+          "title": "Access Control",
+          "controls": [
+            {
+              "id": "3.1.1",
+              "class": "SP800-171",
+              "title": "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).",
+              "parameters": [],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "3.1.1"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "03.01.01"
+                }
+              ],
+              "links": [],
+              "parts": [
+                {
+                  "id": "3.1.1_smt",
+                  "name": "statement",
+                  "prose": "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other system).",
+                  "parts": []
+                },
+                {
+                  "id": "3.1.1_gdn",
+                  "name": "guidance",
+                  "prose": "Access control policies (e.g., identity- or role-based policies, control matrices, and cryptography) control access between active entities or subjects (i.e., users or processes acting on behalf of users) and passive entities or objects (e.g., devices, files, records, and domains) in systems. Access enforcement mechanisms can be employed at the application and service level to provide increased information security. Other systems include systems internal and external to the organization. This requirement focuses on account management for both systems and applications. The definition of and enforcement of access authorizations, other than those determined by account type (e.g., privileged verses non-privileged) are addressed in requirement 3.1.2.",
+                  "links": [
+                    {
+                      "href": "#3.1.2",
+                      "rel": "reference",
+                      "text": "3.1.2"
+                    }
+                  ]
+                }
+              ]
+            },
+
+            {
+              "id": "3.1.2",
+              "class": "SP800-171",
+              "title": "Limit system access to the types of transactions and functions that authorized users are permitted to execute.",
+              "parameters": [],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "3.1.2"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "03.01.02"
+                }
+              ],
+              "links": [],
+              "parts": [
+                {
+                  "id": "3.1.2_smt",
+                  "name": "statement",
+                  "prose": "Limit system access to the types of transactions and functions that authorized users are permitted to execute.",
+                  "parts": []
+                },
+                {
+                  "id": "3.1.2_gdn",
+                  "name": "guidance",
+                  "prose": "Organizations may choose to define access privileges or other attributes by account, by type of account, or a combination of both. System account types include, for example, individual, shared, group, system, guest/anonymous, emergency, developer/manufacturer/vendor, and temporary. Other attributes required for authorizing access include, for example: restrictions on time-of-day, day-of-week, and point-of-origin. In defining other account attributes, organizations may consider system-related requirements (e.g., scheduled maintenance, system upgrades) and mission or business requirements, (e.g., time zone differences, customer requirements, remote access to support travel requirements).",
+                  "links": [
+                    {
+                      "href": "",
+                      "rel": "",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+
+
+            {
+              "id": "3.1.3",
+              "class": "SP800-171",
+              "title": "Control the flow of CUI in accordance with approved authorizations.",
+              "parameters": [],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "3.1.3"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "03.01.03"
+                }
+              ],
+              "links": [],
+              "parts": [
+                {
+                  "id": "3.1.3_smt",
+                  "name": "statement",
+                  "prose": "Control the flow of CUI in accordance with approved authorizations.",
+                  "parts": []
+                },
+                {
+                  "id": "3.1.3_gdn",
+                  "name": "guidance",
+                  "prose": "Information flow control regulates where information can travel within a system and between systems (as opposed to who can access the information) and without explicit regard to subsequent accesses to that information. Flow control restrictions include, for example: keeping export- controlled information from being transmitted in the clear to the Internet; blocking outside traffic that claims to be from within the organization; restricting requests to the Internet that are not from the internal web proxy server; and limiting information transfers between organizations based on data structures and content.\n\nOrganizations commonly employ information flow control policies and enforcement mechanisms to control the flow of information between designated sources and destinations (e.g., networks, individuals, and devices) within systems and between interconnected systems. Flow control is based on characteristics of the information or the information path. Enforcement occurs in boundary protection devices (e.g., gateways, routers, guards, encrypted tunnels, firewalls) that employ rule sets or establish configuration settings that restrict system services, provide a packet- filtering capability based on header information, or message-filtering capability based on message content (e.g., implementing key word searches or using document characteristics). Organizations also consider the trustworthiness of filtering and inspection mechanisms (i.e., hardware, firmware, and software components) that are critical to information flow enforcement.\n\nTransferring information between systems representing different security domains with different security policies introduces risk that such transfers violate one or more domain security policies. In such situations, information owners/stewards provide guidance at designated policy enforcement points between interconnected systems. Organizations consider mandating specific architectural solutions when required to enforce specific security policies. Enforcement includes, for example: prohibiting information transfers between interconnected systems (i.e., allowing access only); employing hardware mechanisms to enforce one-way information flows; and implementing trustworthy regrading mechanisms to reassign security attributes and security labels.",
+                  "links": [
+                    {
+                      "href": "",
+                      "rel": "",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+ 
+
+            {
+              "id": "3.1.4",
+              "class": "SP800-171",
+              "title": "Separate the duties of individuals to reduce the risk of malevolent activity without collusion.",
+              "parameters": [],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "3.1.4"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "03.01.03"
+                }
+              ],
+              "links": [],
+              "parts": [
+                {
+                  "id": "3.1.4_smt",
+                  "name": "statement",
+                  "prose": "Separate the duties of individuals to reduce the risk of malevolent activity without collusion.",
+                  "parts": []
+                },
+                {
+                  "id": "3.1.4_gdn",
+                  "name": "guidance",
+                  "prose": "Separation of duties addresses the potential for abuse of authorized privileges and helps to reduce the risk of malevolent activity without collusion. Separation of duties includes, for example: dividing mission functions and system support functions among different individuals or roles; conducting system support functions with different individuals (e.g., system management, programming, configuration management, quality assurance and testing, and network security); and ensuring that security personnel administering access control functions do not also administer audit functions. Because separation of duty violations can span systems and application domains, organizations consider the entirety of organizational systems and system components when developing policy on separation of duties.",
+                  "links": [
+                    {
+                      "href": "",
+                      "rel": "",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            
+              
+
+
+            {
+              "id": "3.1.5",
+              "class": "SP800-171",
+              "title": "Employ the principle of least privilege, including for specific security functions and privileged accounts.",
+              "parameters": [],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "3.1.5"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "03.01.05"
+                }
+              ],
+              "links": [],
+              "parts": [
+                {
+                  "id": "3.1.5_smt",
+                  "name": "statement",
+                  "prose": "Employ the principle of least privilege, including for specific security functions and privileged accounts.",
+                  "parts": []
+                },
+                {
+                  "id": "3.1.5_gdn",
+                  "name": "guidance",
+                  "prose": "Organizations employ the principle of least privilege for specific duties and authorized accesses for users and processes. The principle of least privilege is applied with the goal of authorized privileges no higher than necessary to accomplish required organizational missions or business functions. Organizations consider the creation of additional processes, roles, and system accounts as necessary, to achieve least privilege. Organizations also apply least privilege to the development, implementation, and operation of organizational systems. Security functions include, for example, establishing system accounts, setting events to be logged, setting intrusion detection parameters, and configuring access authorizations (i.e., permissions, privileges).\n\nPrivileged accounts, including super user accounts, are typically described as system administrator for various types of commercial off-the-shelf operating systems. Restricting privileged accounts to specific personnel or roles prevents day-to-day users from having access to privileged information or functions. Organizations may differentiate in the application of this requirement between allowed privileges for local accounts and for domain accounts provided organizations retain the ability to control system configurations for key security parameters and as otherwise necessary to sufficiently mitigate risk.",
+                  "links": [
+                    {
+                      "href": "",
+                      "rel": "",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+
+
+            {
+              "id": "3.1.6",
+              "class": "SP800-171",
+              "title": "Use non-privileged accounts or roles when accessing nonsecurity functions.",
+              "parameters": [],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "3.1.6"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "03.01.06"
+                }
+              ],
+              "links": [],
+              "parts": [
+                {
+                  "id": "3.1.6_smt",
+                  "name": "statement",
+                  "prose": "Use non-privileged accounts or roles when accessing nonsecurity functions.",
+                  "parts": []
+                },
+                {
+                  "id": "3.1.6_gdn",
+                  "name": "guidance",
+                  "prose": "This requirement limits exposure when operating from within privileged accounts or roles. The inclusion of roles addresses situations where organizations implement access control policies such as role-based access control and where a change of role provides the same degree of assurance in the change of access authorizations for the user and all processes acting on behalf of the user as would be provided by a change between a privileged and non-privileged account.",
+                  "links": [
+                    {
+                      "href": "",
+                      "rel": "",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+
+
+
+            {
+              "id": "3.1.7",
+              "class": "SP800-171",
+              "title": "Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+              "parameters": [],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "3.1.7"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "03.01.07"
+                }
+              ],
+              "links": [],
+              "parts": [
+                {
+                  "id": "3.1.7_smt",
+                  "name": "statement",
+                  "prose": "Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+                  "parts": []
+                },
+                {
+                  "id": "3.1.7_gdn",
+                  "name": "guidance",
+                  "prose": "Privileged functions include, for example, establishing system accounts, performing system integrity checks, conducting patching operations, or administering cryptographic key management activities. Non-privileged users are individuals that do not possess appropriate authorizations. Circumventing intrusion detection and intrusion prevention mechanisms or malicious code protection mechanisms are examples of privileged functions that require protection from non-privileged users. Note that this requirement represents a condition to be achieved by the definition of authorized privileges in 3.1.2.\n\nMisuse of privileged functions, either intentionally or unintentionally by authorized users, or by unauthorized external entities that have compromised system accounts, is a serious and ongoing concern and can have significant adverse impacts on organizations. Logging the use of privileged functions is one way to detect such misuse, and in doing so, help mitigate the risk from insider threats and the advanced persistent threat.",
+                  "links": [
+                    {
+                      "href": "#3.1.2",
+                      "rel": "reference",
+                      "text": "3.1.2"
+                    }
+                  ]
+                }
+              ]
+            },
+
+
+            {
+              "id": "3.1.8",
+              "class": "SP800-171",
+              "title": "smt1",
+              "parameters": [],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "3.1.8"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "03.01.08"
+                }
+              ],
+              "links": [],
+              "parts": [
+                {
+                  "id": "3.1.8_smt",
+                  "name": "statement",
+                  "prose": "smt1",
+                  "parts": []
+                },
+                {
+                  "id": "3.1.8_gdn",
+                  "name": "guidance",
+                  "prose": "discussion",
+                  "links": [
+                    {
+                      "href": "",
+                      "rel": "",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {
+              "id": "at-2",
+              "class": "SP800-171",
+              "title": "Security Awareness Training",
+              "parameters": [
+                {
+                  "id": "at-2_prm_1",
+                  "label": "organization-defined frequency"
+                }
+              ],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "AT-2"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "at-02"
+                }
+              ],
+              "links": [
+                {
+                  "href": "#ref002",
+                  "rel": "reference",
+                  "text": "C.F.R. Part 5 Subpart C (5 C.F.R. 930.301)"
+                },
+                {
+                  "href": "#ref008",
+                  "rel": "reference",
+                  "text": "Executive Order 13587"
+                },
+                {
+                  "href": "#ref077",
+                  "rel": "reference",
+                  "text": "NIST Special Publication 800-50"
+                }
+              ],
+              "parts": [
+                {
+                  "id": "at-2_smt",
+                  "name": "statement",
+                  "prose": "The organization provides basic security awareness training to information system users (including managers, senior executives, and contractors):",
+                  "parts": [
+                    {
+                      "id": "at-2_smt.a",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "a."
+                        }
+                      ],
+                      "prose": "As part of initial training for new users;"
+                    },
+                    {
+                      "id": "at-2_smt.b",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "b."
+                        }
+                      ],
+                      "prose": "When required by information system changes; and"
+                    },
+                    {
+                      "id": "at-2_smt.c",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "c."
+                        }
+                      ],
+                      "prose": "\n                  {{ at-2_prm_1 }} thereafter."
+                    }
+                  ]
+                },
+                {
+                  "id": "at-2_gdn",
+                  "name": "guidance",
+                  "prose": "Organizations determine the appropriate content of security awareness training and security awareness techniques based on the specific organizational requirements and the information systems to which personnel have authorized access. The content includes a basic understanding of the need for information security and user actions to maintain security and to respond to suspected security incidents. The content also addresses awareness of the need for operations security. Security awareness techniques can include, for example, displaying posters, offering supplies inscribed with security reminders, generating email advisories/notices from senior organizational officials, displaying logon screen messages, and conducting information security awareness events.",
+                  "links": [
+                    {
+                      "href": "#at-3",
+                      "rel": "related",
+                      "text": "AT-3"
+                    },
+                    {
+                      "href": "#at-4",
+                      "rel": "related",
+                      "text": "AT-4"
+                    },
+                    {
+                      "href": "#pl-4",
+                      "rel": "related",
+                      "text": "PL-4"
+                    }
+                  ]
+                },
+                {
+                  "id": "at-2_obj",
+                  "name": "objective",
+                  "prose": "Determine if the organization:",
+                  "parts": [
+                    {
+                      "id": "at-2.a_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AT-2(a)"
+                        }
+                      ],
+                      "prose": "provides basic security awareness training to information system users (including managers, senior executives, and contractors) as part of initial training for new users;"
+                    },
+                    {
+                      "id": "at-2.b_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AT-2(b)"
+                        }
+                      ],
+                      "prose": "provides basic security awareness training to information system users (including managers, senior executives, and contractors) when required by information system changes; and"
+                    },
+                    {
+                      "id": "at-2.c_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AT-2(c)"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "id": "at-2.c_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-2(c)[1]"
+                            }
+                          ],
+                          "prose": "defines the frequency to provide refresher security awareness training thereafter to information system users (including managers, senior executives, and contractors); and"
+                        },
+                        {
+                          "id": "at-2.c_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-2(c)[2]"
+                            }
+                          ],
+                          "prose": "provides refresher security awareness training to information users (including managers, senior executives, and contractors) with the organization-defined frequency."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "EXAMINE"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Security awareness and training policy\\n\\nprocedures addressing security awareness training implementation\\n\\nappropriate codes of federal regulations\\n\\nsecurity awareness training curriculum\\n\\nsecurity awareness training materials\\n\\nsecurity plan\\n\\ntraining records\\n\\nother relevant documents or records"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "INTERVIEW"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Organizational personnel with responsibilities for security awareness training\\n\\norganizational personnel with information security responsibilities\\n\\norganizational personnel comprising the general information system user community"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "TEST"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Automated mechanisms managing security awareness training"
+                    }
+                  ]
+                }
+              ],
+              "controls": [
+                {
+                  "id": "at-2.1",
+                  "class": "SP800-53-enhancement",
+                  "title": "Practical Exercises",
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AT-2(1)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "at-02.01"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": "at-2.1_smt",
+                      "name": "statement",
+                      "prose": "The organization includes practical exercises in security awareness training that simulate actual cyber attacks."
+                    },
+                    {
+                      "id": "at-2.1_gdn",
+                      "name": "guidance",
+                      "prose": "Practical exercises may include, for example, no-notice social engineering attempts to collect information, gain unauthorized access, or simulate the adverse impact of opening malicious email attachments or invoking, via spear phishing attacks, malicious web links.",
+                      "links": [
+                        {
+                          "href": "#ca-2",
+                          "rel": "related",
+                          "text": "CA-2"
+                        },
+                        {
+                          "href": "#ca-7",
+                          "rel": "related",
+                          "text": "CA-7"
+                        },
+                        {
+                          "href": "#cp-4",
+                          "rel": "related",
+                          "text": "CP-4"
+                        },
+                        {
+                          "href": "#ir-3",
+                          "rel": "related",
+                          "text": "IR-3"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "at-2.1_obj",
+                      "name": "objective",
+                      "prose": "Determine if the organization includes practical exercises in security awareness training that simulate actual cyber attacks. "
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "EXAMINE"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Security awareness and training policy\\n\\nprocedures addressing security awareness training implementation\\n\\nsecurity awareness training curriculum\\n\\nsecurity awareness training materials\\n\\nsecurity plan\\n\\nother relevant documents or records"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "INTERVIEW"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Organizational personnel that participate in security awareness training\\n\\norganizational personnel with responsibilities for security awareness training\\n\\norganizational personnel with information security responsibilities"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "TEST"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Automated mechanisms implementing cyber attack simulations in practical exercises"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "at-2.2",
+                  "class": "SP800-53-enhancement",
+                  "title": "Insider Threat",
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AT-2(2)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "at-02.02"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": "at-2.2_smt",
+                      "name": "statement",
+                      "prose": "The organization includes security awareness training on recognizing and reporting potential indicators of insider threat."
+                    },
+                    {
+                      "id": "at-2.2_gdn",
+                      "name": "guidance",
+                      "prose": "Potential indicators and possible precursors of insider threat can include behaviors such as inordinate, long-term job dissatisfaction, attempts to gain access to information not required for job performance, unexplained access to financial resources, bullying or sexual harassment of fellow employees, workplace violence, and other serious violations of organizational policies, procedures, directives, rules, or practices. Security awareness training includes how to communicate employee and management concerns regarding potential indicators of insider threat through appropriate organizational channels in accordance with established organizational policies and procedures.",
+                      "links": [
+                        {
+                          "href": "#pl-4",
+                          "rel": "related",
+                          "text": "PL-4"
+                        },
+                        {
+                          "href": "#pm-12",
+                          "rel": "related",
+                          "text": "PM-12"
+                        },
+                        {
+                          "href": "#ps-3",
+                          "rel": "related",
+                          "text": "PS-3"
+                        },
+                        {
+                          "href": "#ps-6",
+                          "rel": "related",
+                          "text": "PS-6"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "at-2.2_obj",
+                      "name": "objective",
+                      "prose": "Determine if the organization includes security awareness training on recognizing and reporting potential indicators of insider threat. "
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "EXAMINE"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Security awareness and training policy\\n\\nprocedures addressing security awareness training implementation\\n\\nsecurity awareness training curriculum\\n\\nsecurity awareness training materials\\n\\nsecurity plan\\n\\nother relevant documents or records"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "INTERVIEW"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Organizational personnel that participate in security awareness training\\n\\norganizational personnel with responsibilities for basic security awareness training\\n\\norganizational personnel with information security responsibilities"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "at-3",
+              "class": "SP800-171",
+              "title": "Role-based Security Training",
+              "parameters": [
+                {
+                  "id": "at-3_prm_1",
+                  "label": "organization-defined frequency"
+                }
+              ],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "AT-3"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "at-03"
+                }
+              ],
+              "links": [
+                {
+                  "href": "#ref002",
+                  "rel": "reference",
+                  "text": "C.F.R. Part 5 Subpart C (5 C.F.R. 930.301)"
+                },
+                {
+                  "href": "#ref057",
+                  "rel": "reference",
+                  "text": "NIST Special Publication 800-16"
+                },
+                {
+                  "href": "#ref077",
+                  "rel": "reference",
+                  "text": "NIST Special Publication 800-50"
+                }
+              ],
+              "parts": [
+                {
+                  "id": "at-3_smt",
+                  "name": "statement",
+                  "prose": "The organization provides role-based security training to personnel with assigned security roles and responsibilities:",
+                  "parts": [
+                    {
+                      "id": "at-3_smt.a",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "a."
+                        }
+                      ],
+                      "prose": "Before authorizing access to the information system or performing assigned duties;"
+                    },
+                    {
+                      "id": "at-3_smt.b",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "b."
+                        }
+                      ],
+                      "prose": "When required by information system changes; and"
+                    },
+                    {
+                      "id": "at-3_smt.c",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "c."
+                        }
+                      ],
+                      "prose": "\n                  {{ at-3_prm_1 }} thereafter."
+                    }
+                  ]
+                },
+                {
+                  "id": "at-3_gdn",
+                  "name": "guidance",
+                  "prose": "Organizations determine the appropriate content of security training based on the assigned roles and responsibilities of individuals and the specific security requirements of organizations and the information systems to which personnel have authorized access. In addition, organizations provide enterprise architects, information system developers, software developers, acquisition/procurement officials, information system managers, system/network administrators, personnel conducting configuration management and auditing activities, personnel performing independent verification and validation activities, security control assessors, and other personnel having access to system-level software, adequate security-related technical training specifically tailored for their assigned duties. Comprehensive role-based training addresses management, operational, and technical roles and responsibilities covering physical, personnel, and technical safeguards and countermeasures. Such training can include for example, policies, procedures, tools, and artifacts for the organizational security roles defined. Organizations also provide the training necessary for individuals to carry out their responsibilities related to operations and supply chain security within the context of organizational information security programs. Role-based security training also applies to contractors providing services to federal agencies.",
+                  "links": [
+                    {
+                      "href": "#at-2",
+                      "rel": "related",
+                      "text": "AT-2"
+                    },
+                    {
+                      "href": "#at-4",
+                      "rel": "related",
+                      "text": "AT-4"
+                    },
+                    {
+                      "href": "#pl-4",
+                      "rel": "related",
+                      "text": "PL-4"
+                    },
+                    {
+                      "href": "#ps-7",
+                      "rel": "related",
+                      "text": "PS-7"
+                    },
+                    {
+                      "href": "#sa-3",
+                      "rel": "related",
+                      "text": "SA-3"
+                    },
+                    {
+                      "href": "#sa-12",
+                      "rel": "related",
+                      "text": "SA-12"
+                    },
+                    {
+                      "href": "#sa-16",
+                      "rel": "related",
+                      "text": "SA-16"
+                    }
+                  ]
+                },
+                {
+                  "id": "at-3_obj",
+                  "name": "objective",
+                  "prose": "Determine if the organization:",
+                  "parts": [
+                    {
+                      "id": "at-3.a_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AT-3(a)"
+                        }
+                      ],
+                      "prose": "provides role-based security training to personnel with assigned security roles and responsibilities before authorizing access to the information system or performing assigned duties;"
+                    },
+                    {
+                      "id": "at-3.b_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AT-3(b)"
+                        }
+                      ],
+                      "prose": "provides role-based security training to personnel with assigned security roles and responsibilities when required by information system changes; and"
+                    },
+                    {
+                      "id": "at-3.c_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AT-3(c)"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "id": "at-3.c_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(c)[1]"
+                            }
+                          ],
+                          "prose": "defines the frequency to provide refresher role-based security training thereafter to personnel with assigned security roles and responsibilities; and"
+                        },
+                        {
+                          "id": "at-3.c_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(c)[2]"
+                            }
+                          ],
+                          "prose": "provides refresher role-based security training to personnel with assigned security roles and responsibilities with the organization-defined frequency."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "EXAMINE"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Security awareness and training policy\\n\\nprocedures addressing security training implementation\\n\\ncodes of federal regulations\\n\\nsecurity training curriculum\\n\\nsecurity training materials\\n\\nsecurity plan\\n\\ntraining records\\n\\nother relevant documents or records"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "INTERVIEW"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Organizational personnel with responsibilities for role-based security training\\n\\norganizational personnel with assigned information system security roles and responsibilities"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "TEST"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Automated mechanisms managing role-based security training"
+                    }
+                  ]
+                }
+              ],
+              "controls": [
+                {
+                  "id": "at-3.1",
+                  "class": "SP800-53-enhancement",
+                  "title": "Environmental Controls",
+                  "parameters": [
+                    {
+                      "id": "at-3.1_prm_1",
+                      "label": "organization-defined personnel or roles"
+                    },
+                    {
+                      "id": "at-3.1_prm_2",
+                      "label": "organization-defined frequency"
+                    }
+                  ],
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AT-3(1)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "at-03.01"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": "at-3.1_smt",
+                      "name": "statement",
+                      "prose": "The organization provides {{ at-3.1_prm_1 }} with initial and {{ at-3.1_prm_2 }} training in the employment and operation of environmental controls."
+                    },
+                    {
+                      "id": "at-3.1_gdn",
+                      "name": "guidance",
+                      "prose": "Environmental controls include, for example, fire suppression and detection devices/systems, sprinkler systems, handheld fire extinguishers, fixed fire hoses, smoke detectors, temperature/humidity, HVAC, and power within the facility. Organizations identify personnel with specific roles and responsibilities associated with environmental controls requiring specialized training.",
+                      "links": [
+                        {
+                          "href": "#pe-1",
+                          "rel": "related",
+                          "text": "PE-1"
+                        },
+                        {
+                          "href": "#pe-13",
+                          "rel": "related",
+                          "text": "PE-13"
+                        },
+                        {
+                          "href": "#pe-14",
+                          "rel": "related",
+                          "text": "PE-14"
+                        },
+                        {
+                          "href": "#pe-15",
+                          "rel": "related",
+                          "text": "PE-15"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "at-3.1_obj",
+                      "name": "objective",
+                      "prose": "Determine if the organization:",
+                      "parts": [
+                        {
+                          "id": "at-3.1_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(1)[1]"
+                            }
+                          ],
+                          "prose": "defines personnel or roles to be provided with initial and refresher training in the employment and operation of environmental controls;"
+                        },
+                        {
+                          "id": "at-3.1_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(1)[2]"
+                            }
+                          ],
+                          "prose": "provides organization-defined personnel or roles with initial and refresher training in the employment and operation of environmental controls;"
+                        },
+                        {
+                          "id": "at-3.1_obj.3",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(1)[3]"
+                            }
+                          ],
+                          "prose": "defines the frequency to provide refresher training in the employment and operation of environmental controls; and"
+                        },
+                        {
+                          "id": "at-3.1_obj.4",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(1)[4]"
+                            }
+                          ],
+                          "prose": "provides refresher training in the employment and operation of environmental controls with the organization-defined frequency."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "EXAMINE"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Security awareness and training policy\\n\\nprocedures addressing security training implementation\\n\\nsecurity training curriculum\\n\\nsecurity training materials\\n\\nsecurity plan\\n\\ntraining records\\n\\nother relevant documents or records"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "INTERVIEW"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Organizational personnel with responsibilities for role-based security training\\n\\norganizational personnel with responsibilities for employing and operating environmental controls"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "at-3.2",
+                  "class": "SP800-53-enhancement",
+                  "title": "Physical Security Controls",
+                  "parameters": [
+                    {
+                      "id": "at-3.2_prm_1",
+                      "label": "organization-defined personnel or roles"
+                    },
+                    {
+                      "id": "at-3.2_prm_2",
+                      "label": "organization-defined frequency"
+                    }
+                  ],
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AT-3(2)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "at-03.02"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": "at-3.2_smt",
+                      "name": "statement",
+                      "prose": "The organization provides {{ at-3.2_prm_1 }} with initial and {{ at-3.2_prm_2 }} training in the employment and operation of physical security controls."
+                    },
+                    {
+                      "id": "at-3.2_gdn",
+                      "name": "guidance",
+                      "prose": "Physical security controls include, for example, physical access control devices, physical intrusion alarms, monitoring/surveillance equipment, and security guards (deployment and operating procedures). Organizations identify personnel with specific roles and responsibilities associated with physical security controls requiring specialized training.",
+                      "links": [
+                        {
+                          "href": "#pe-2",
+                          "rel": "related",
+                          "text": "PE-2"
+                        },
+                        {
+                          "href": "#pe-3",
+                          "rel": "related",
+                          "text": "PE-3"
+                        },
+                        {
+                          "href": "#pe-4",
+                          "rel": "related",
+                          "text": "PE-4"
+                        },
+                        {
+                          "href": "#pe-5",
+                          "rel": "related",
+                          "text": "PE-5"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "at-3.2_obj",
+                      "name": "objective",
+                      "prose": "Determine if the organization:",
+                      "parts": [
+                        {
+                          "id": "at-3.2_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(2)[1]"
+                            }
+                          ],
+                          "prose": "defines personnel or roles to be provided with initial and refresher training in the employment and operation of physical security controls;"
+                        },
+                        {
+                          "id": "at-3.2_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(2)[2]"
+                            }
+                          ],
+                          "prose": "provides organization-defined personnel or roles with initial and refresher training in the employment and operation of physical security controls;"
+                        },
+                        {
+                          "id": "at-3.2_obj.3",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(2)[3]"
+                            }
+                          ],
+                          "prose": "defines the frequency to provide refresher training in the employment and operation of physical security controls; and"
+                        },
+                        {
+                          "id": "at-3.2_obj.4",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(2)[4]"
+                            }
+                          ],
+                          "prose": "provides refresher training in the employment and operation of physical security controls with the organization-defined frequency."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "EXAMINE"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Security awareness and training policy\\n\\nprocedures addressing security training implementation\\n\\nsecurity training curriculum\\n\\nsecurity training materials\\n\\nsecurity plan\\n\\ntraining records\\n\\nother relevant documents or records"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "INTERVIEW"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Organizational personnel with responsibilities for role-based security training\\n\\norganizational personnel with responsibilities for employing and operating physical security controls"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "at-3.3",
+                  "class": "SP800-53-enhancement",
+                  "title": "Practical Exercises",
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AT-3(3)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "at-03.03"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": "at-3.3_smt",
+                      "name": "statement",
+                      "prose": "The organization includes practical exercises in security training that reinforce training objectives."
+                    },
+                    {
+                      "id": "at-3.3_gdn",
+                      "name": "guidance",
+                      "prose": "Practical exercises may include, for example, security training for software developers that includes simulated cyber attacks exploiting common software vulnerabilities (e.g., buffer overflows), or spear/whale phishing attacks targeted at senior leaders/executives. These types of practical exercises help developers better understand the effects of such vulnerabilities and appreciate the need for security coding standards and processes."
+                    },
+                    {
+                      "id": "at-3.3_obj",
+                      "name": "objective",
+                      "prose": "Determine if the organization includes practical exercises in security training that reinforce training objectives. "
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "EXAMINE"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Security awareness and training policy\\n\\nprocedures addressing security awareness training implementation\\n\\nsecurity awareness training curriculum\\n\\nsecurity awareness training materials\\n\\nsecurity plan\\n\\nother relevant documents or records"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "INTERVIEW"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Organizational personnel with responsibilities for role-based security training\\n\\norganizational personnel that participate in security awareness training"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "at-3.4",
+                  "class": "SP800-53-enhancement",
+                  "title": "Suspicious Communications and Anomalous System Behavior",
+                  "parameters": [
+                    {
+                      "id": "at-3.4_prm_1",
+                      "label": "organization-defined indicators of malicious code"
+                    }
+                  ],
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AT-3(4)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "at-03.04"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": "at-3.4_smt",
+                      "name": "statement",
+                      "prose": "The organization provides training to its personnel on {{ at-3.4_prm_1 }} to recognize suspicious communications and anomalous behavior in organizational information systems."
+                    },
+                    {
+                      "id": "at-3.4_gdn",
+                      "name": "guidance",
+                      "prose": "A well-trained workforce provides another organizational safeguard that can be employed as part of a defense-in-depth strategy to protect organizations against malicious code coming in to organizations via email or the web applications. Personnel are trained to look for indications of potentially suspicious email (e.g., receiving an unexpected email, receiving an email containing strange or poor grammar, or receiving an email from an unfamiliar sender but who appears to be from a known sponsor or contractor). Personnel are also trained on how to respond to such suspicious email or web communications (e.g., not opening attachments, not clicking on embedded web links, and checking the source of email addresses). For this process to work effectively, all organizational personnel are trained and made aware of what constitutes suspicious communications. Training personnel on how to recognize anomalous behaviors in organizational information systems can potentially provide early warning for the presence of malicious code. Recognition of such anomalous behavior by organizational personnel can supplement automated malicious code detection and protection tools and systems employed by organizations."
+                    },
+                    {
+                      "id": "at-3.4_obj",
+                      "name": "objective",
+                      "prose": "Determine if the organization:",
+                      "parts": [
+                        {
+                          "id": "at-3.4_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(4)[1]"
+                            }
+                          ],
+                          "prose": "defines indicators of malicious code; and"
+                        },
+                        {
+                          "id": "at-3.4_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-3(4)[2]"
+                            }
+                          ],
+                          "prose": "provides training to its personnel on organization-defined indicators of malicious code to recognize suspicious communications and anomalous behavior in organizational information systems."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "EXAMINE"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Security awareness and training policy\\n\\nprocedures addressing security training implementation\\n\\nsecurity training curriculum\\n\\nsecurity training materials\\n\\nsecurity plan\\n\\ntraining records\\n\\nother relevant documents or records"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "INTERVIEW"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Organizational personnel with responsibilities for role-based security training\\n\\norganizational personnel that participate in security awareness training"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "at-4",
+              "class": "SP800-171",
+              "title": "Security Training Records",
+              "parameters": [
+                {
+                  "id": "at-4_prm_1",
+                  "label": "organization-defined time period"
+                }
+              ],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "AT-4"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "at-04"
+                }
+              ],
+              "parts": [
+                {
+                  "id": "at-4_smt",
+                  "name": "statement",
+                  "prose": "The organization:",
+                  "parts": [
+                    {
+                      "id": "at-4_smt.a",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "a."
+                        }
+                      ],
+                      "prose": "Documents and monitors individual information system security training activities including basic security awareness training and specific information system security training; and"
+                    },
+                    {
+                      "id": "at-4_smt.b",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "b."
+                        }
+                      ],
+                      "prose": "Retains individual training records for {{ at-4_prm_1 }}."
+                    }
+                  ]
+                },
+                {
+                  "id": "at-4_gdn",
+                  "name": "guidance",
+                  "prose": "Documentation for specialized training may be maintained by individual supervisors at the option of the organization.",
+                  "links": [
+                    {
+                      "href": "#at-2",
+                      "rel": "related",
+                      "text": "AT-2"
+                    },
+                    {
+                      "href": "#at-3",
+                      "rel": "related",
+                      "text": "AT-3"
+                    },
+                    {
+                      "href": "#pm-14",
+                      "rel": "related",
+                      "text": "PM-14"
+                    }
+                  ]
+                },
+                {
+                  "id": "at-4_obj",
+                  "name": "objective",
+                  "prose": "Determine if the organization:",
+                  "parts": [
+                    {
+                      "id": "at-4.a_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AT-4(a)"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "id": "at-4.a_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-4(a)[1]"
+                            }
+                          ],
+                          "prose": "documents individual information system security training activities including:",
+                          "parts": [
+                            {
+                              "id": "at-4.a_obj.1.a",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AT-4(a)[1][a]"
+                                }
+                              ],
+                              "prose": "basic security awareness training;"
+                            },
+                            {
+                              "id": "at-4.a_obj.1.b",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AT-4(a)[1][b]"
+                                }
+                              ],
+                              "prose": "specific role-based information system security training;"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "at-4.a_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-4(a)[2]"
+                            }
+                          ],
+                          "prose": "monitors individual information system security training activities including:",
+                          "parts": [
+                            {
+                              "id": "at-4.a_obj.2.a",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AT-4(a)[2][a]"
+                                }
+                              ],
+                              "prose": "basic security awareness training;"
+                            },
+                            {
+                              "id": "at-4.a_obj.2.b",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AT-4(a)[2][b]"
+                                }
+                              ],
+                              "prose": "specific role-based information system security training;"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "at-4.b_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AT-4(b)"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "id": "at-4.b_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-4(b)[1]"
+                            }
+                          ],
+                          "prose": "defines a time period to retain individual training records; and"
+                        },
+                        {
+                          "id": "at-4.b_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AT-4(b)[2]"
+                            }
+                          ],
+                          "prose": "retains individual training records for the organization-defined time period."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "EXAMINE"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Security awareness and training policy\\n\\nprocedures addressing security training records\\n\\nsecurity awareness and training records\\n\\nsecurity plan\\n\\nother relevant documents or records"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "INTERVIEW"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Organizational personnel with security training record retention responsibilities"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "TEST"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Automated mechanisms supporting management of security training records"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "at-5",
+              "class": "SP800-171",
+              "title": "Contacts with Security Groups and Associations",
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "AT-5"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "at-05"
+                },
+                {
+                  "name": "status",
+                  "value": "Withdrawn"
+                }
+              ],
+              "links": [
+                {
+                  "href": "#pm-15",
+                  "rel": "incorporated-into",
+                  "text": "PM-15"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "au",
+          "class": "family",
+          "title": "Audit and Accountability",
+          "controls": [
+            {
+              "id": "au-1",
+              "class": "SP800-171",
+              "title": "Audit and Accountability Policy and Procedures",
+              "parameters": [
+                {
+                  "id": "au-1_prm_1",
+                  "label": "organization-defined personnel or roles"
+                },
+                {
+                  "id": "au-1_prm_2",
+                  "label": "organization-defined frequency"
+                },
+                {
+                  "id": "au-1_prm_3",
+                  "label": "organization-defined frequency"
+                }
+              ],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "AU-1"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "au-01"
+                }
+              ],
+              "links": [
+                {
+                  "href": "#ref050",
+                  "rel": "reference",
+                  "text": "NIST Special Publication 800-12"
+                },
+                {
+                  "href": "#ref044",
+                  "rel": "reference",
+                  "text": "NIST Special Publication 800-100"
+                }
+              ],
+              "parts": [
+                {
+                  "id": "au-1_smt",
+                  "name": "statement",
+                  "prose": "The organization:",
+                  "parts": [
+                    {
+                      "id": "au-1_smt.a",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "a."
+                        }
+                      ],
+                      "prose": "Develops, documents, and disseminates to {{ au-1_prm_1 }}:",
+                      "parts": [
+                        {
+                          "id": "au-1_smt.a.1",
+                          "name": "item",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "1."
+                            }
+                          ],
+                          "prose": "An audit and accountability policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and"
+                        },
+                        {
+                          "id": "au-1_smt.a.2",
+                          "name": "item",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "2."
+                            }
+                          ],
+                          "prose": "Procedures to facilitate the implementation of the audit and accountability policy and associated audit and accountability controls; and"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "au-1_smt.b",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "b."
+                        }
+                      ],
+                      "prose": "Reviews and updates the current:",
+                      "parts": [
+                        {
+                          "id": "au-1_smt.b.1",
+                          "name": "item",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "1."
+                            }
+                          ],
+                          "prose": "Audit and accountability policy {{ au-1_prm_2 }}; and"
+                        },
+                        {
+                          "id": "au-1_smt.b.2",
+                          "name": "item",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "2."
+                            }
+                          ],
+                          "prose": "Audit and accountability procedures {{ au-1_prm_3 }}."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "au-1_gdn",
+                  "name": "guidance",
+                  "prose": "This control addresses the establishment of policy and procedures for the effective implementation of selected security controls and control enhancements in the AU family. Policy and procedures reflect applicable federal laws, Executive Orders, directives, regulations, policies, standards, and guidance. Security program policies and procedures at the organization level may make the need for system-specific policies and procedures unnecessary. The policy can be included as part of the general information security policy for organizations or conversely, can be represented by multiple policies reflecting the complex nature of certain organizations. The procedures can be established for the security program in general and for particular information systems, if needed. The organizational risk management strategy is a key factor in establishing policy and procedures.",
+                  "links": [
+                    {
+                      "href": "#pm-9",
+                      "rel": "related",
+                      "text": "PM-9"
+                    }
+                  ]
+                },
+                {
+                  "id": "au-1_obj",
+                  "name": "objective",
+                  "prose": "Determine if the organization:",
+                  "parts": [
+                    {
+                      "id": "au-1.a_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AU-1(a)"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "id": "au-1.a.1_obj",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-1(a)(1)"
+                            }
+                          ],
+                          "parts": [
+                            {
+                              "id": "au-1.a.1_obj.1",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(a)(1)[1]"
+                                }
+                              ],
+                              "prose": "develops and documents an audit and accountability policy that addresses:",
+                              "parts": [
+                                {
+                                  "id": "au-1.a.1_obj.1.a",
+                                  "name": "objective",
+                                  "properties": [
+                                    {
+                                      "name": "label",
+                                      "value": "AU-1(a)(1)[1][a]"
+                                    }
+                                  ],
+                                  "prose": "purpose;"
+                                },
+                                {
+                                  "id": "au-1.a.1_obj.1.b",
+                                  "name": "objective",
+                                  "properties": [
+                                    {
+                                      "name": "label",
+                                      "value": "AU-1(a)(1)[1][b]"
+                                    }
+                                  ],
+                                  "prose": "scope;"
+                                },
+                                {
+                                  "id": "au-1.a.1_obj.1.c",
+                                  "name": "objective",
+                                  "properties": [
+                                    {
+                                      "name": "label",
+                                      "value": "AU-1(a)(1)[1][c]"
+                                    }
+                                  ],
+                                  "prose": "roles;"
+                                },
+                                {
+                                  "id": "au-1.a.1_obj.1.d",
+                                  "name": "objective",
+                                  "properties": [
+                                    {
+                                      "name": "label",
+                                      "value": "AU-1(a)(1)[1][d]"
+                                    }
+                                  ],
+                                  "prose": "responsibilities;"
+                                },
+                                {
+                                  "id": "au-1.a.1_obj.1.e",
+                                  "name": "objective",
+                                  "properties": [
+                                    {
+                                      "name": "label",
+                                      "value": "AU-1(a)(1)[1][e]"
+                                    }
+                                  ],
+                                  "prose": "management commitment;"
+                                },
+                                {
+                                  "id": "au-1.a.1_obj.1.f",
+                                  "name": "objective",
+                                  "properties": [
+                                    {
+                                      "name": "label",
+                                      "value": "AU-1(a)(1)[1][f]"
+                                    }
+                                  ],
+                                  "prose": "coordination among organizational entities;"
+                                },
+                                {
+                                  "id": "au-1.a.1_obj.1.g",
+                                  "name": "objective",
+                                  "properties": [
+                                    {
+                                      "name": "label",
+                                      "value": "AU-1(a)(1)[1][g]"
+                                    }
+                                  ],
+                                  "prose": "compliance;"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "au-1.a.1_obj.2",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(a)(1)[2]"
+                                }
+                              ],
+                              "prose": "defines personnel or roles to whom the audit and accountability policy are to be disseminated;"
+                            },
+                            {
+                              "id": "au-1.a.1_obj.3",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(a)(1)[3]"
+                                }
+                              ],
+                              "prose": "disseminates the audit and accountability policy to organization-defined personnel or roles;"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "au-1.a.2_obj",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-1(a)(2)"
+                            }
+                          ],
+                          "parts": [
+                            {
+                              "id": "au-1.a.2_obj.1",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(a)(2)[1]"
+                                }
+                              ],
+                              "prose": "develops and documents procedures to facilitate the implementation of the audit and accountability policy and associated audit and accountability controls;"
+                            },
+                            {
+                              "id": "au-1.a.2_obj.2",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(a)(2)[2]"
+                                }
+                              ],
+                              "prose": "defines personnel or roles to whom the procedures are to be disseminated;"
+                            },
+                            {
+                              "id": "au-1.a.2_obj.3",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(a)(2)[3]"
+                                }
+                              ],
+                              "prose": "disseminates the procedures to organization-defined personnel or roles;"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "au-1.b_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AU-1(b)"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "id": "au-1.b.1_obj",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-1(b)(1)"
+                            }
+                          ],
+                          "parts": [
+                            {
+                              "id": "au-1.b.1_obj.1",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(b)(1)[1]"
+                                }
+                              ],
+                              "prose": "defines the frequency to review and update the current audit and accountability policy;"
+                            },
+                            {
+                              "id": "au-1.b.1_obj.2",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(b)(1)[2]"
+                                }
+                              ],
+                              "prose": "reviews and updates the current audit and accountability policy with the organization-defined frequency;"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "au-1.b.2_obj",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-1(b)(2)"
+                            }
+                          ],
+                          "parts": [
+                            {
+                              "id": "au-1.b.2_obj.1",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(b)(2)[1]"
+                                }
+                              ],
+                              "prose": "defines the frequency to review and update the current audit and accountability procedures; and"
+                            },
+                            {
+                              "id": "au-1.b.2_obj.2",
+                              "name": "objective",
+                              "properties": [
+                                {
+                                  "name": "label",
+                                  "value": "AU-1(b)(2)[2]"
+                                }
+                              ],
+                              "prose": "reviews and updates the current audit and accountability procedures in accordance with the organization-defined frequency."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "EXAMINE"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Audit and accountability policy and procedures\\n\\nother relevant documents or records"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "INTERVIEW"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Organizational personnel with audit and accountability responsibilities\\n\\norganizational personnel with information security responsibilities"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "au-2",
+              "class": "SP800-171",
+              "title": "Audit Events",
+              "parameters": [
+                {
+                  "id": "au-2_prm_1",
+                  "label": "organization-defined auditable events"
+                },
+                {
+                  "id": "au-2_prm_2",
+                  "label": "organization-defined audited events (the subset of the auditable events defined in AU-2 a.) along with the frequency of (or situation requiring) auditing for each identified event"
+                }
+              ],
+              "properties": [
+                {
+                  "name": "label",
+                  "value": "AU-2"
+                },
+                {
+                  "name": "sort-id",
+                  "value": "au-02"
+                }
+              ],
+              "links": [
+                {
+                  "href": "#ref099",
+                  "rel": "reference",
+                  "text": "NIST Special Publication 800-92"
+                },
+                {
+                  "href": "#ref027",
+                  "rel": "reference",
+                  "text": "http://idmanagement.gov"
+                }
+              ],
+              "parts": [
+                {
+                  "id": "au-2_smt",
+                  "name": "statement",
+                  "prose": "The organization:",
+                  "parts": [
+                    {
+                      "id": "au-2_smt.a",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "a."
+                        }
+                      ],
+                      "prose": "Determines that the information system is capable of auditing the following events: {{ au-2_prm_1 }};"
+                    },
+                    {
+                      "id": "au-2_smt.b",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "b."
+                        }
+                      ],
+                      "prose": "Coordinates the security audit function with other organizational entities requiring audit-related information to enhance mutual support and to help guide the selection of auditable events;"
+                    },
+                    {
+                      "id": "au-2_smt.c",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "c."
+                        }
+                      ],
+                      "prose": "Provides a rationale for why the auditable events are deemed to be adequate to support after-the-fact investigations of security incidents; and"
+                    },
+                    {
+                      "id": "au-2_smt.d",
+                      "name": "item",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "d."
+                        }
+                      ],
+                      "prose": "Determines that the following events are to be audited within the information system: {{ au-2_prm_2 }}."
+                    }
+                  ]
+                },
+                {
+                  "id": "au-2_gdn",
+                  "name": "guidance",
+                  "prose": "An event is any observable occurrence in an organizational information system. Organizations identify audit events as those events which are significant and relevant to the security of information systems and the environments in which those systems operate in order to meet specific and ongoing audit needs. Audit events can include, for example, password changes, failed logons, or failed accesses related to information systems, administrative privilege usage, PIV credential usage, or third-party credential usage. In determining the set of auditable events, organizations consider the auditing appropriate for each of the security controls to be implemented. To balance auditing requirements with other information system needs, this control also requires identifying that subset of auditable events that are audited at a given point in time. For example, organizations may determine that information systems must have the capability to log every file access both successful and unsuccessful, but not activate that capability except for specific circumstances due to the potential burden on system performance. Auditing requirements, including the need for auditable events, may be referenced in other security controls and control enhancements. Organizations also include auditable events that are required by applicable federal laws, Executive Orders, directives, policies, regulations, and standards. Audit records can be generated at various levels of abstraction, including at the packet level as information traverses the network. Selecting the appropriate level of abstraction is a critical aspect of an audit capability and can facilitate the identification of root causes to problems. Organizations consider in the definition of auditable events, the auditing necessary to cover related events such as the steps in distributed, transaction-based processes (e.g., processes that are distributed across multiple organizations) and actions that occur in service-oriented architectures.",
+                  "links": [
+                    {
+                      "href": "#ac-6",
+                      "rel": "related",
+                      "text": "AC-6"
+                    },
+                    {
+                      "href": "#ac-17",
+                      "rel": "related",
+                      "text": "AC-17"
+                    },
+                    {
+                      "href": "#au-3",
+                      "rel": "related",
+                      "text": "AU-3"
+                    },
+                    {
+                      "href": "#au-12",
+                      "rel": "related",
+                      "text": "AU-12"
+                    },
+                    {
+                      "href": "#ma-4",
+                      "rel": "related",
+                      "text": "MA-4"
+                    },
+                    {
+                      "href": "#mp-2",
+                      "rel": "related",
+                      "text": "MP-2"
+                    },
+                    {
+                      "href": "#mp-4",
+                      "rel": "related",
+                      "text": "MP-4"
+                    },
+                    {
+                      "href": "#si-4",
+                      "rel": "related",
+                      "text": "SI-4"
+                    }
+                  ]
+                },
+                {
+                  "id": "au-2_obj",
+                  "name": "objective",
+                  "prose": "Determine if the organization:",
+                  "parts": [
+                    {
+                      "id": "au-2.a_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AU-2(a)"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "id": "au-2.a_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-2(a)[1]"
+                            }
+                          ],
+                          "prose": "defines the auditable events that the information system must be capable of auditing;"
+                        },
+                        {
+                          "id": "au-2.a_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-2(a)[2]"
+                            }
+                          ],
+                          "prose": "determines that the information system is capable of auditing organization-defined auditable events;"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "au-2.b_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AU-2(b)"
+                        }
+                      ],
+                      "prose": "coordinates the security audit function with other organizational entities requiring audit-related information to enhance mutual support and to help guide the selection of auditable events;"
+                    },
+                    {
+                      "id": "au-2.c_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AU-2(c)"
+                        }
+                      ],
+                      "prose": "provides a rationale for why the auditable events are deemed to be adequate to support after-the-fact investigations of security incidents;"
+                    },
+                    {
+                      "id": "au-2.d_obj",
+                      "name": "objective",
+                      "properties": [
+                        {
+                          "name": "label",
+                          "value": "AU-2(d)"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "id": "au-2.d_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-2(d)[1]"
+                            }
+                          ],
+                          "prose": "defines the subset of auditable events defined in AU-2a that are to be audited within the information system;"
+                        },
+                        {
+                          "id": "au-2.d_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-2(d)[2]"
+                            }
+                          ],
+                          "prose": "determines that the subset of auditable events defined in AU-2a are to be audited within the information system; and"
+                        },
+                        {
+                          "id": "au-2.d_obj.3",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-2(d)[3]"
+                            }
+                          ],
+                          "prose": "determines the frequency of (or situation requiring) auditing for each identified event."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "EXAMINE"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Audit and accountability policy\\n\\nprocedures addressing auditable events\\n\\nsecurity plan\\n\\ninformation system design documentation\\n\\ninformation system configuration settings and associated documentation\\n\\ninformation system audit records\\n\\ninformation system auditable events\\n\\nother relevant documents or records"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "INTERVIEW"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Organizational personnel with audit and accountability responsibilities\\n\\norganizational personnel with information security responsibilities\\n\\nsystem/network administrators"
+                    }
+                  ]
+                },
+                {
+                  "name": "assessment",
+                  "properties": [
+                    {
+                      "name": "method",
+                      "value": "TEST"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "name": "objects",
+                      "prose": "Automated mechanisms implementing information system auditing"
+                    }
+                  ]
+                }
+              ],
+              "controls": [
+                {
+                  "id": "au-2.1",
+                  "class": "SP800-53-enhancement",
+                  "title": "Compilation of Audit Records from Multiple Sources",
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AU-2(1)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "au-02.01"
+                    },
+                    {
+                      "name": "status",
+                      "value": "Withdrawn"
+                    }
+                  ],
+                  "links": [
+                    {
+                      "href": "#au-12",
+                      "rel": "incorporated-into",
+                      "text": "AU-12"
+                    }
+                  ]
+                },
+                {
+                  "id": "au-2.2",
+                  "class": "SP800-53-enhancement",
+                  "title": "Selection of Audit Events by Component",
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AU-2(2)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "au-02.02"
+                    },
+                    {
+                      "name": "status",
+                      "value": "Withdrawn"
+                    }
+                  ],
+                  "links": [
+                    {
+                      "href": "#au-12",
+                      "rel": "incorporated-into",
+                      "text": "AU-12"
+                    }
+                  ]
+                },
+                {
+                  "id": "au-2.3",
+                  "class": "SP800-53-enhancement",
+                  "title": "Reviews and Updates",
+                  "parameters": [
+                    {
+                      "id": "au-2.3_prm_1",
+                      "label": "organization-defined frequency"
+                    }
+                  ],
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AU-2(3)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "au-02.03"
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": "au-2.3_smt",
+                      "name": "statement",
+                      "prose": "The organization reviews and updates the audited events {{ au-2.3_prm_1 }}."
+                    },
+                    {
+                      "id": "au-2.3_gdn",
+                      "name": "guidance",
+                      "prose": "Over time, the events that organizations believe should be audited may change. Reviewing and updating the set of audited events periodically is necessary to ensure that the current set is still necessary and sufficient."
+                    },
+                    {
+                      "id": "au-2.3_obj",
+                      "name": "objective",
+                      "prose": "Determine if the organization:",
+                      "parts": [
+                        {
+                          "id": "au-2.3_obj.1",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-2(3)[1]"
+                            }
+                          ],
+                          "prose": "defines the frequency to review and update the audited events; and"
+                        },
+                        {
+                          "id": "au-2.3_obj.2",
+                          "name": "objective",
+                          "properties": [
+                            {
+                              "name": "label",
+                              "value": "AU-2(3)[2]"
+                            }
+                          ],
+                          "prose": "reviews and updates the auditable events with organization-defined frequency."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "EXAMINE"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Audit and accountability policy\\n\\nprocedures addressing auditable events\\n\\nsecurity plan\\n\\nlist of organization-defined auditable events\\n\\nauditable events review and update records\\n\\ninformation system audit records\\n\\ninformation system incident reports\\n\\nother relevant documents or records"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "INTERVIEW"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Organizational personnel with audit and accountability responsibilities\\n\\norganizational personnel with information security responsibilities"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "assessment",
+                      "properties": [
+                        {
+                          "name": "method",
+                          "value": "TEST"
+                        }
+                      ],
+                      "parts": [
+                        {
+                          "name": "objects",
+                          "prose": "Automated mechanisms supporting review and update of auditable events"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "au-2.4",
+                  "class": "SP800-53-enhancement",
+                  "title": "Privileged Functions",
+                  "properties": [
+                    {
+                      "name": "label",
+                      "value": "AU-2(4)"
+                    },
+                    {
+                      "name": "sort-id",
+                      "value": "au-02.04"
+                    },
+                    {
+                      "name": "status",
+                      "value": "Withdrawn"
+                    }
+                  ],
+                  "links": [
+                    {
+                      "href": "#ac-6.9",
+                      "rel": "incorporated-into",
+                      "text": "AC-6 (9)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "back-matter": {}
+    }
+  }
