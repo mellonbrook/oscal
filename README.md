@@ -73,3 +73,18 @@ There's a range of success in this challenge. Do as much as you can in 45 minute
 - Did you organize the controls by "groups" in the output?
 - What is the quality and usefulness of your README_USAGE.md instructing someone how to use your code.
 - How closely did you adhere to these instructions?
+
+## Solution
+
+Prerequisites: `Python 3.7.9`
+
+```
+$ python --version
+Python 3.7.9
+```
+
+Run:
+```
+$ python 800-171-csv_to_oscal_json.py
+-------Conversion Complete : OUTPUT FILE: 800-171-oscal.json-------
+```
