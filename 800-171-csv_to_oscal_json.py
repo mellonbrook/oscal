@@ -82,7 +82,7 @@ def convert_csv_to_oscal_json():
         for row in reader:
             control = Control(id=row[0], 
                               parts=[Statement(id=row[0], prose=row[1]), 
-                                  Guidance(id=row[1], prose=row[2].replace("\\n", ' '))],
+                                  Guidance(id=row[0], prose=row[2].replace("\\n", ' '))],
                               title=row[1], 
                               properties=[{"name":"label", "value": row[0]}]
                              )
