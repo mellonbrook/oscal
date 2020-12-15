@@ -34,10 +34,19 @@ class Guidance(object):
         self.parts = links
 
 def convert_csv_to_oscal_json():
+    group = Group(id="3.1", group_class="family", title="Access Control")
+
     with open('data/800-171-source.csv', encoding='utf-8-sig') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
-            print(row)
+            control = Control(id=row[0], 
+                              parts=[Statement(id=row[0], prose=row[1]), 
+                                  Guidance(id=row[1], prose=row[2].replace("\\n", ' '))],
+                              title=row[1], 
+                              properties=[{"name":"label", "value": row[0]}]
+                             )
+            group.controls.append(control)
+    return group
 
 def main():
     oscal_json = convert_csv_to_oscal_json()
