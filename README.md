@@ -88,3 +88,5 @@ Run:
 $ python 800-171-csv_to_oscal_json.py
 -------Conversion Complete : OUTPUT FILE: 800-171-oscal.json-------
 ```
+
+Here is the output from the execution of the script: https://github.com/mellonbrook/oscal/blob/main/800-171-oscal.json
