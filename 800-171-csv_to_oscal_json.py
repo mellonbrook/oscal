@@ -90,8 +90,15 @@ def convert_csv_to_oscal_json():
 
     return json.dumps(group.to_dict(), indent=4)
 
+def write_oscal_json_to_file(oscal_json):
+      file = open('800-171-oscal.json', "w")
+      file.write(oscal_json) 
+      file.close()  
+
 def main():
     oscal_json = convert_csv_to_oscal_json()
+    write_oscal_json_to_file(oscal_json)
+    print("-------Conversion Complete : OUTPUT FILE: 800-171-oscal.json------- ")
 
 if __name__ == "__main__":
     main()
